@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Poppins";
+}
+
+main {
+  padding: 0 1rem;
+}
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+}
+
+.caja-header {
+  width: 327px;
+  height: 74px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.precio-item{
+  font-weight: bold;
+}
+
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+
+.menu{
+  min-height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  transition: all 1s;
+  z-index: 10;
+  scroll-behavior: smooth;
+}
+
+.closed-menu{
+  min-height: 100%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  transition: 1s all;
+  z-index: 10;
+  scroll-behavior: smooth;
+}
+
+.close-icon{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
