@@ -57,10 +57,7 @@ const Navbar = () => {
             </Link>
             <Link href="/#envios">
               <li>Envíos</li>
-            </Link>
-            <Link href="/#contactos">
-              <li>Contactos</li>
-            </Link>
+            </Link>            
           </ul>
         </div>
       </nav>
@@ -89,9 +86,7 @@ const Navbar = () => {
             Envíos
           </Link>
 
-          <Link className="mx-2" href={"/#contactos"}>
-            Contactos
-          </Link>
+          
         </div>
       </nav>
     </>
