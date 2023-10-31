@@ -10,7 +10,7 @@ import Footer from "@/components/Navbar/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
 
 export const getStaticProps = async () => {
-  const response = await fetch(`http://localhost:3001/productos`, {
+  const response = await fetch(`${process.env.host}/productos`, {
     cache: "no-cache",
   });
   const productos = await response.json();

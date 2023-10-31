@@ -6,7 +6,7 @@ import Image from "next/image";
 import Product from "@/components/Product";
 
 export async function getStaticPaths() {
-  const response = await fetch("http://localhost:3001/productos");
+  const response = await fetch(`${process.env.host}/productos`);
   const products = await response.json();
 
   const paths = products.map((product) => ({
@@ -23,7 +23,7 @@ export async function getStaticProps({ params }) {
   const product = params.product;
   console.log(product);
 
-  const response = await fetch(`http://localhost:3001/productos`);
+  const response = await fetch(`${process.env.host}/productos`);
   const productData = await response.json();
 
   return {
