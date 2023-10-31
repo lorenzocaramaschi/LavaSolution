@@ -19,8 +19,8 @@ const ProductsList = ({ productos }) => {
             className="m-auto mb-4 w-full rounded-xl"
           />
           <div className="flex justify-between items-center">
-            <p className="font-bold">{producto.name}</p>
-            <p className="precio-item text-2xl">${producto.price}</p>
+            <p className="font-bold lg:text-xl">{producto.name}</p>
+            <p className="precio-item text-2xl lg:text-3xl">${producto.price}</p>
           </div>
         </Link>
       ))}

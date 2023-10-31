@@ -30,33 +30,71 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between p-2 fixed w-full bg-white z-10 top-0">
-      <Link href="/">
-        <Image src={logo} width={30} alt="LavaSolution logo" />
-      </Link>
-      <p className="font-bold text-3xl">LavaSolution</p>
-      <MenuRoundedIcon className="text-4xl" onClick={toggleNavbar} />
-      <div className={isOpen ? "menu" : "closed-menu"}>
-        <CloseRoundedIcon className="close-icon" onClick={toggleNavbar} />
-        <ul>
-          <Link href="/#nosotros">
-            <li>Nosotros</li>
+    <>
+      <nav className="flex justify-between p-2 fixed w-full bg-white z-10 top-0 responsive">
+        <Link href="/">
+          <Image src={logo} width={30} alt="LavaSolution logo" />
+        </Link>
+        <p className="font-bold text-3xl">LavaSolution</p>
+        <MenuRoundedIcon
+          className="text-4xl cursor-pointer"
+          onClick={toggleNavbar}
+        />
+        <div className={isOpen ? "menu" : "closed-menu"}>
+          <CloseRoundedIcon className="close-icon" onClick={toggleNavbar} />
+          <ul>
+            <Link href="/#nosotros">
+              <li>Nosotros</li>
+            </Link>
+            <Link href="/#productos">
+              <li>Productos</li>
+            </Link>
+            <Link href="/#repuestos">
+              <li>Repuestos</li>
+            </Link>
+            <Link href="/#reparacion">
+              <li>Plan Canje</li>
+            </Link>
+            <Link href="/#envios">
+              <li>Envíos</li>
+            </Link>
+            <Link href="/#contactos">
+              <li>Contactos</li>
+            </Link>
+          </ul>
+        </div>
+      </nav>
+      <nav className="flex justify-between p-2 fixed w-full bg-white z-10 top-0 desktop">
+        <div className="flex">
+          <Link href="/">
+            <Image src={logo} width={30} alt="LavaSolution logo" />
           </Link>
-          <Link href="/#productos">
-            <li>Productos</li>
+          <p className="font-bold text-3xl">LavaSolution</p>
+        </div>
+        <div className="text-xl font-bold">
+          <Link className="mx-2" href={"/#nosotros"}>
+            Nosotros
           </Link>
-          <Link href="/#repuestos">
-            <li>Repuestos</li>
+          <Link className="mx-2" href={"/#productos"}>
+            Productos
           </Link>
-          <Link href="/#reparacion">
-            <li>Reparación</li>
+          <Link className="mx-2" href={"/#repuestos"}>
+            Repuestos
           </Link>
-          <Link href="/#contactos">
-            <li>Contactos</li>
+
+          <Link className="mx-2" href={"/#reparacion"}>
+            Plan Canje
           </Link>
-        </ul>
-      </div>
-    </nav>
+          <Link className="mx-2" href={"/#envios"}>
+            Envíos
+          </Link>
+
+          <Link className="mx-2" href={"/#contactos"}>
+            Contactos
+          </Link>
+        </div>
+      </nav>
+    </>
   );
 };
 

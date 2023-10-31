@@ -6,7 +6,7 @@ const Product = ({ product }) => {
     <div>
       <h1 className="text-4xl font-bold text-center">{product.name}</h1>
       <Image
-        className="w-full p-10 rounded-xl bg-gray-200 my-4"
+        className="p-10 rounded-xl bg-gray-200 my-4 lg:w-80 sm:w-full"
         src={product.image}
         alt={product.name}
         width={197}

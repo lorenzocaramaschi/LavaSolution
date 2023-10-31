@@ -55,46 +55,45 @@ export default function Home({ productos }) {
               alt="Imagen lavavajillas"
             />
           </div>
-          <h2 className="my-2 font-bold text-2xl text-center">
+          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
             ¿Que es LavaSolution?
           </h2>
-          <p className=" text-xs text-center bg-gray-200 p-4 rounded-2xl">
-            LavaSolution es un negocio en la zona norte de Argentina que se
-            especializa en la venta de lavavajillas de calidad y soluciones de
-            limpieza. Ofrecemos una amplia selección de lavavajillas de marcas
-            reconocidas, asesoramiento personalizado y productos de limpieza
-            especializados. Simplificamos y mejoramos la experiencia en el
-            lavado de vajillas tanto para hogares como establecimientos
-            comerciales. Visítanos y descubre cómo LavaSolution puede ayudarte.
+          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
+            LavaSolution es un emprendimiento ubicado en la zona Norte de Buenos
+            Aires, Partido de Tigre, que se especializa en la venta de
+            lavavajillas usados Premium. <br></br>Todos los lavavajillas que
+            ofrecemos, poseen un mes de garantía y se entregan probados a
+            conformidad del comprador.
           </p>
         </article>
 
         <article id="productos" className="productos">
-          <h2 className="my-2 font-bold text-2xl text-center">Productos</h2>
+          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl lg:my-6">
+            Productos
+          </h2>
           <ProductsList productos={productos} />
         </article>
 
         <article id="repuestos" className="repuestos">
-          <h2 className="my-2 font-bold text-2xl text-center">Repuestos</h2>
-          <p className=" text-xs text-center bg-gray-200 p-4 rounded-2xl">
-            En LavaSolution, compramos lavavajillas completos para repuestos. Si
-            tienes un lavavajillas antiguo o dañado, contáctanos al{" "}
-            <strong>+54 9 11 4531-0463</strong> . ¡Ofrecemos una solución rápida
-            y conveniente para deshacerte de tu electrodoméstico!
+          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
+            Venta de repuestos
+          </h2>
+          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
+            En LavaSolution disponemos de una gran grantidad de repuestos de
+            lavavajillas (usados chequeados), de distintos modelos y marcas. ¡No deje de
+            consultar nuestro catálogo!
           </p>
           <ImageCarousel images={images} />
         </article>
 
         <article id="reparacion" className="reparacion">
-          <h2 className="my-2 font-bold text-2xl text-center">Reparación</h2>
-          <p className=" text-xs text-center bg-gray-200 p-4 rounded-2xl">
-            En LavaSolution, ofrecemos servicios de reparación de lavavajillas.
-            Nuestro equipo de técnicos especializados está listo para solucionar
-            cualquier problema que tengas con tu lavavajillas. Utilizamos
-            repuestos originales y garantizamos un servicio rápido y confiable.
-            Contáctanos al <strong>+54 9 11 4531-0463</strong> para programar
-            una visita técnica. Confía en nosotros para reparar tu lavavajillas
-            de manera efectiva y asequible.
+          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
+            Plan canje
+          </h2>
+          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
+            En LavaSolution, ofrecemos <strong>Plan Canje</strong>. <br></br> Se
+            recibirán en modalidad Plan Canje, lavavajillas usados que se
+            encuentren en buen estado estético y que puedan ser reparados.
           </p>
           <Image
             className="m-auto"
@@ -104,34 +103,27 @@ export default function Home({ productos }) {
           />
         </article>
 
-        <article id="contactos" className="contactos">
-          <h2 className="my-2 font-bold text-2xl text-center">Contactos</h2>
-          <div>
-            <div className="flex items-center py-2">
-              <LocationOnRoundedIcon className="text-2xl" />
-              <p>
-                Puedes encontrarnos en el Barrio Talar del Lago 1 en Gral.
-                Pacheco.
-              </p>
-            </div>
-            <div className="flex items-center py-2">
-              <CallRoundedIcon className="text-2xl" />
-              <p>
-                Celular: Para consultas, puedes llamarnos al número +54 9 11
-                4531-0463.
-              </p>
-            </div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1645.1323803863752!2d-58.648486499515904!3d-34.44542647294223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1687896761656!5m2!1ses!2sar"
-              width="300"
-              height="300"
-              className="border-0 py-2 m-auto rounded-lg mb-4"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+        <article id="envios" className="reparacion">
+          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
+            Envíos
+          </h2>
+          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
+            Los lavavajillas y los repuestos ofrecidos en venta, podrán ser retirados de forma personal.<br></br>La
+            compra de lavavajillas que requieran envío, tendrán un costo
+            adicional de $12.000 pesos, en concepto de materiales embalaje y
+            traslado a la transportista (ej: VIA CARGO). <br></br>Las compras de
+            repuestos que requieran envío, serán despachadas por VIA CARGO u OCA.
+            En todos los casos, con pago del envío en destino, al recibir el
+            producto.
+          </p>
+          <Image
+            className="m-auto"
+            src={ilustracion}
+            width={300}
+            alt="Ilustracion reparaciones"
+          />
         </article>
+       
       </main>
       <Footer />
     </>
