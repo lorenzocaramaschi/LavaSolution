@@ -33,6 +33,8 @@ export default function Home({ productos }) {
     { image: "https://i.imgur.com/xBpLtDv.jpeg", name: "Ariston LFF 8214" },
     { image: "https://i.imgur.com/bHYvR7d.jpeg", name: "Ariston LD 87" },
     { image: "https://i.imgur.com/O9AZR2p.jpeg", name: "Ariston LFO 3T121 Inverter" },
+    { image: "https://i.imgur.com/rReIm1s.jpeg", name: "Ariston L61" },
+    {image: "https://i.imgur.com/EH1ML1c.png", name: "Ariston Alexia LFT 2284 Panelable"}
   ];
 
   return (
