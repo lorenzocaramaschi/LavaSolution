@@ -2,9 +2,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../../public/logo ls.png";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +30,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between p-2 fixed w-full bg-white z-10 top-0 responsive">
-        <Link href="/">
+      <nav className="flex justify-between p-2 fixed w-full bg-white z-10 top-0 responsive">        
+        <Link smooth={true} to="nosotros" duration={500}>
           <Image src={logo} width={30} alt="LavaSolution logo" />
-        </Link>
-        <p className="font-bold text-3xl">LavaSolution</p>
+        </Link>        
+        <p className="font-bold text-3xl">LavaDelta</p>
         <MenuRoundedIcon
           className="text-4xl cursor-pointer"
           onClick={toggleNavbar}
@@ -43,50 +42,47 @@ const Navbar = () => {
         <div className={isOpen ? "menu" : "closed-menu"}>
           <CloseRoundedIcon className="close-icon" onClick={toggleNavbar} />
           <ul>
-            <Link href="/#nosotros">
+            <Link smooth={true} to="nosotros" duration={500}>
               <li>Nosotros</li>
             </Link>
-            <Link href="/#productos">
+            <Link smooth={true} to="productos" duration={500}>
               <li>Productos</li>
             </Link>
-            <Link href="/#repuestos">
+            <Link smooth={true} to="repuestos" duration={500}>
               <li>Repuestos</li>
             </Link>
-            <Link href="/#reparacion">
+            <Link smooth={true} to="reparacion" duration={500}>
               <li>Plan Canje</li>
             </Link>
-            <Link href="/#envios">
+            <Link smooth={true} to="envios" duration={500}>
               <li>Envíos</li>
-            </Link>            
+            </Link>
           </ul>
         </div>
       </nav>
       <nav className="flex justify-between p-2 fixed w-full bg-white z-10 top-0 desktop">
         <div className="flex">
-          <Link href="/">
+          <Link className="cursor-pointer" smooth={true} duration={500} to="nosotros">
             <Image src={logo} width={30} alt="LavaSolution logo" />
           </Link>
-          <p className="font-bold text-3xl">LavaSolution</p>
+          <p className="font-bold text-3xl">LavaDelta</p>
         </div>
-        <div className="text-xl font-bold">
-          <Link className="mx-2" href={"/#nosotros"}>
+        <div className="text-xl font-bold cursor-pointer">
+          <Link className="mx-2" smooth={true} to="nosotros" duration={500}>
             Nosotros
           </Link>
-          <Link className="mx-2" href={"/#productos"}>
+          <Link className="mx-2" offset={-50} smooth={true} to="productos" duration={500}>
             Productos
           </Link>
-          <Link className="mx-2" href={"/#repuestos"}>
+          <Link className="mx-2" offset={-50} smooth={true} to="repuestos" duration={500}>
             Repuestos
           </Link>
-
-          <Link className="mx-2" href={"/#reparacion"}>
+          <Link className="mx-2" smooth={true} to="reparacion" duration={500}>
             Plan Canje
           </Link>
-          <Link className="mx-2" href={"/#envios"}>
+          <Link className="mx-2" smooth={true} to="envios" duration={500}>
             Envíos
           </Link>
-
-          
         </div>
       </nav>
     </>

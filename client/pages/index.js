@@ -4,8 +4,7 @@ import Image from "next/image";
 import lavavajillas from "../public/lavavajillas.jpg";
 import ProductsList from "@/components/Navbar/ProductsList";
 import ilustracion from "../public/LavaSolution illustration.png";
-import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
-import CallRoundedIcon from "@mui/icons-material/CallRounded";
+import ilustracion2 from "../public/delivery.png";
 import Footer from "@/components/Navbar/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
 
@@ -23,16 +22,23 @@ export const getStaticProps = async () => {
 
 export default function Home({ productos }) {
   const images = [
-    "https://i.imgur.com/zYjmwjH.png",
-    "https://i.imgur.com/pRnteDl.png",
-    "https://i.imgur.com/0b8iywi.png",
-    "https://i.imgur.com/PVldWth.png",
+    { image: "https://i.imgur.com/itB68Ty.jpeg", name: "Whirpool WLD20" },
+    { image: "https://i.imgur.com/9j0QIA5.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/fVhx3oc.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/4sq6lue.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/PuAggSg.jpeg", name: "Ariston LFF8M019" },
+    { image: "https://i.imgur.com/C0w08Rr.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/EOzWUQX.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/Roj1x11.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/xBpLtDv.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/bHYvR7d.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/O9AZR2p.jpeg", name: "Whirpool" },
   ];
 
   return (
     <>
       <Head>
-        <title>LavaSolution</title>
+        <title>LavaDelta</title>
         <meta
           name="description"
           content="¡Tu mejor opción para lavavajillas!"
@@ -46,8 +52,21 @@ export default function Home({ productos }) {
       </Head>
       <Navbar />
       <main>
-        <article id="nosotros" className="nosotros">
-          <div className="caja-header  overflow-hidden m-auto mt-6">
+        <article
+          id="nosotros"
+          className="flex pt-10 items-center justify-center flex-row max-md:flex-col"
+        >
+          <div className="w-[50%] max-md:w-[100%]">
+            <h2>¿Que es LavaDelta?</h2>
+            <p className="bg-aqblue text-white p-4 rounded-lg">
+              LavaDelta es un emprendimiento ubicado en la zona Norte de Buenos
+              Aires, Partido de Tigre, que se especializa en la venta de
+              lavavajillas usados Premium. <br></br>Todos los lavavajillas que
+              ofrecemos, poseen un mes de garantía y se entregan probados a
+              conformidad del comprador.
+            </p>
+          </div>
+          <div>
             <Image
               className="object-cover m-auto"
               src={lavavajillas}
@@ -55,75 +74,65 @@ export default function Home({ productos }) {
               alt="Imagen lavavajillas"
             />
           </div>
-          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
-            ¿Que es LavaSolution?
-          </h2>
-          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
-            LavaSolution es un emprendimiento ubicado en la zona Norte de Buenos
-            Aires, Partido de Tigre, que se especializa en la venta de
-            lavavajillas usados Premium. <br></br>Todos los lavavajillas que
-            ofrecemos, poseen un mes de garantía y se entregan probados a
-            conformidad del comprador.
-          </p>
         </article>
 
-        <article id="productos" className="productos">
-          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl lg:my-6">
-            Productos
-          </h2>
+        <article id="productos">
+          <h2>Productos</h2>
           <ProductsList productos={productos} />
         </article>
 
-        <article id="repuestos" className="repuestos">
-          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
-            Venta de repuestos
-          </h2>
-          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
-            En LavaSolution disponemos de una gran grantidad de repuestos de
-            lavavajillas (usados chequeados), de distintos modelos y marcas. ¡No deje de
-            consultar nuestro catálogo!
-          </p>
+        <article id="repuestos">
+          <div>
+            <h2>Venta de repuestos</h2>
+            <p className="bg-aqblue text-white p-4 rounded-lg w-[50%] m-auto max-md:w-[100%]">
+              En LavaDelta disponemos de una gran cantidad de repuestos de
+              lavavajillas usados, de los modelos y marcas que figuran en la
+              pestaña repuestos. Consulte por su repuesto identificando el
+              modelo de lavavajilla.
+            </p>
+          </div>
           <ImageCarousel images={images} />
         </article>
 
-        <article id="reparacion" className="reparacion">
-          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
-            Plan canje
-          </h2>
-          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
-            En LavaSolution, ofrecemos <strong>Plan Canje</strong>. <br></br> Se
-            recibirán en modalidad Plan Canje, lavavajillas usados que se
-            encuentren en buen estado estético y que puedan ser reparados.
-          </p>
-          <Image
-            className="m-auto"
-            src={ilustracion}
-            width={300}
-            alt="Ilustracion reparaciones"
-          />
+        <article
+          id="reparacion"
+          className="flex pt-10 items-center justify-center flex-row canje"
+        >
+          <div className="w-[50%] max-md:w-[100%]">
+            <h2>Plan canje</h2>
+            <p className="bg-aqblue text-white p-4 rounded-lg">
+              En LavaDelta, ofrecemos <strong>Plan Canje</strong>. <br></br>{" "}
+              Aproveche la oportunidad de entregar su lavavajilla usado sin
+              funcionar y llevese uno funcionando en óptimas condiciones.{" "}
+              <br></br>
+              <strong>ATENCIÓN</strong>: Se recibirán en modalidad Plan Canje,
+              exclusivamente lavavajillas usados que se encuentren en buen
+              estado estético y que puedan ser reparados.
+            </p>
+          </div>
+          <Image className=" lg:ml-4" src={ilustracion} width={300} alt="Ilustracion reparaciones" />
         </article>
 
-        <article id="envios" className="reparacion">
-          <h2 className="my-2 font-bold text-2xl text-center lg:text-6xl">
-            Envíos
-          </h2>
-          <p className=" text-xs bg-gray-200 p-4 rounded-2xl lg:text-xl">
-            Los lavavajillas y los repuestos ofrecidos en venta, podrán ser retirados de forma personal.<br></br>La
-            compra de lavavajillas que requieran envío, tendrán un costo
-            adicional de $12.000 pesos, en concepto de materiales embalaje y
-            traslado a la transportista (ej: VIA CARGO). <br></br>Las compras de
-            repuestos que requieran envío, serán despachadas por VIA CARGO u OCA.
-            En todos los casos, con pago del envío en destino, al recibir el
-            producto.
-          </p>
-          <Image
-            className="m-auto"
-            src={ilustracion}
-            width={300}
-            alt="Ilustracion reparaciones"
-          />
+        <article
+          id="envios"
+          className="flex pt-10 items-center justify-center flex-row envios"
+        >
+          <div className="w-[50%] max-md:w-[100%]">
+            <h2>Envíos</h2>
+            <p className="bg-aqblue text-white p-4 rounded-lg">
+              Los lavavajillas y los repuestos ofrecidos en venta, podrán ser
+              retirados de forma personal.<br></br>La compra de lavavajillas que
+              requiera envío, tendrán un costo adicional de $12.000, en concepto
+              de materiales de embalaje y traslado del lavavajilla a la
+              transportista (Ej: VIA CARGO). <br></br>Las compras de repuestos
+              que requieran envío, serán despachadas por VIA CARGO u OCA. En
+              todos los casos, con pago del envío en destino, al retirar el
+              producto.
+            </p>
+          </div>
+
+          <Image className=" lg:ml-4" src={ilustracion2} width={300} alt="Ilustracion reparaciones" />
         </article>
-       
       </main>
       <Footer />
     </>

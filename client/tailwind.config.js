@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         poppins: "Poppins",
       },
+      colors: {
+       'dsblue':'#17202A',
+       'aqblue':'#007ACC'
+      }
     },
   },
   plugins: [],

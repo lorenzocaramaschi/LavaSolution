@@ -4,23 +4,19 @@ import React from "react";
 
 const ProductsList = ({ productos }) => {
   return (
-    <div className="product-container ">
+    <div className="container">
       {productos.map((producto) => (
-        <Link
-          className="bg-gray-200 p-4 mb-4 rounded-lg"
-          href={`/producto/${producto.name}`}
-          key={producto._id}
-        >
+        <Link className="flex flex-col justify-center items-center m-auto mt-10" href={`/producto/${producto.name}`} key={producto._id}>
           <Image
+          className="bg-dsblue p-4 rounded-xl"
             src={producto.image}
             alt={producto.name}
-            width="150"
-            height="150"
-            className="m-auto mb-4 w-full rounded-xl"
+            width={350}
+            height={350}
           />
-          <div className="flex justify-between items-center">
-            <p className="font-bold lg:text-xl">{producto.name}</p>
-            <p className="precio-item text-2xl lg:text-3xl">${producto.price}</p>
+          <div className="flex flex-row items-center justify-between mt-2">
+            <p>{producto.name}</p>
+            <p className="text-white bg-aqblue ml-4 p-1 rounded-sm">${producto.price}</p>
           </div>
         </Link>
       ))}
