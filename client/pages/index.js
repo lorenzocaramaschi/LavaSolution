@@ -22,17 +22,17 @@ export const getStaticProps = async () => {
 
 export default function Home({ productos }) {
   const images = [
-    { image: "https://i.imgur.com/itB68Ty.jpeg", name: "Whirpool WLD20" },
-    { image: "https://i.imgur.com/9j0QIA5.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/fVhx3oc.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/4sq6lue.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/itB68Ty.jpeg", name: "Whirpool WLD20 (blanco)" },
+    { image: "https://i.imgur.com/9j0QIA5.jpeg", name: "Philco DW-PH30" },
+    { image: "https://i.imgur.com/fVhx3oc.jpeg", name: "Whirpool WLR12 (blanco)" },
+    { image: "https://i.imgur.com/4sq6lue.jpeg", name: "Electrolux ESF 610" },
     { image: "https://i.imgur.com/PuAggSg.jpeg", name: "Ariston LFF8M019" },
-    { image: "https://i.imgur.com/C0w08Rr.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/EOzWUQX.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/Roj1x11.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/xBpLtDv.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/bHYvR7d.jpeg", name: "Whirpool" },
-    { image: "https://i.imgur.com/O9AZR2p.jpeg", name: "Whirpool" },
+    { image: "https://i.imgur.com/C0w08Rr.jpeg", name: "Whirpool WLR12 (acero inoxidable)" },
+    { image: "https://i.imgur.com/EOzWUQX.jpeg", name: "Whirpool WLD20 (gris)" },
+    { image: "https://i.imgur.com/Roj1x11.jpeg", name: "Ariston L73 Dúo" },
+    { image: "https://i.imgur.com/xBpLtDv.jpeg", name: "Ariston LFF 8214" },
+    { image: "https://i.imgur.com/bHYvR7d.jpeg", name: "Ariston LD 87" },
+    { image: "https://i.imgur.com/O9AZR2p.jpeg", name: "Ariston LFO 3T121 Inverter" },
   ];
 
   return (
