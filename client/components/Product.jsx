@@ -36,7 +36,7 @@ const Product = ({ product }) => {
       </div>
 
       <Link
-        href={"wa.link/k4c5mc"}
+        href={"https://wa.link/k4c5mc"}
         target="_blank"
         className="bg-dsblue p-4 my-4 text-white flex items-center justify-between w-[70%] lg:w-[20%]"
       >
