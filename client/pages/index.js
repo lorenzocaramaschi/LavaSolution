@@ -7,34 +7,53 @@ import ilustracion from "../public/LavaSolution illustration.png";
 import ilustracion2 from "../public/delivery.png";
 import Footer from "@/components/Navbar/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
+import { useQuery } from "react-query";
 
-export const getStaticProps = async () => {
+const fetchData = async () => {
   const response = await fetch(`${process.env.host}/productos`, {
     cache: "no-cache",
   });
-  const productos = await response.json();
-  return {
-    props: {
-      productos: productos,
-    },
-  };
+  const data = await response.json();
+  return data;
 };
 
-export default function Home({ productos }) {
+export default function Home() {
+  const { data: productos } = useQuery("productos", fetchData, {
+    staleTime: 10000,
+  });
+
   const images = [
-    { image: "https://i.imgur.com/itB68Ty.jpeg", name: "Whirpool WLD20 (blanco)" },
+    {
+      image: "https://i.imgur.com/itB68Ty.jpeg",
+      name: "Whirpool WLD20 (blanco)",
+    },
     { image: "https://i.imgur.com/9j0QIA5.jpeg", name: "Philco DW-PH30" },
-    { image: "https://i.imgur.com/fVhx3oc.jpeg", name: "Whirpool WLR12 (blanco)" },
+    {
+      image: "https://i.imgur.com/fVhx3oc.jpeg",
+      name: "Whirpool WLR12 (blanco)",
+    },
     { image: "https://i.imgur.com/4sq6lue.jpeg", name: "Electrolux ESF 610" },
     { image: "https://i.imgur.com/PuAggSg.jpeg", name: "Ariston LFF8M019" },
-    { image: "https://i.imgur.com/C0w08Rr.jpeg", name: "Whirpool WLR12 (acero inoxidable)" },
-    { image: "https://i.imgur.com/EOzWUQX.jpeg", name: "Whirpool WLD20 (gris)" },
+    {
+      image: "https://i.imgur.com/C0w08Rr.jpeg",
+      name: "Whirpool WLR12 (acero inoxidable)",
+    },
+    {
+      image: "https://i.imgur.com/EOzWUQX.jpeg",
+      name: "Whirpool WLD20 (gris)",
+    },
     { image: "https://i.imgur.com/Roj1x11.jpeg", name: "Ariston L73 Dúo" },
     { image: "https://i.imgur.com/xBpLtDv.jpeg", name: "Ariston LFF 8214" },
     { image: "https://i.imgur.com/bHYvR7d.jpeg", name: "Ariston LD 87" },
-    { image: "https://i.imgur.com/O9AZR2p.jpeg", name: "Ariston LFO 3T121 Inverter" },
+    {
+      image: "https://i.imgur.com/O9AZR2p.jpeg",
+      name: "Ariston LFO 3T121 Inverter",
+    },
     { image: "https://i.imgur.com/rReIm1s.jpeg", name: "Ariston L61" },
-    {image: "https://i.imgur.com/EH1ML1c.png", name: "Ariston Alexia LFT 2284 Panelable"}
+    {
+      image: "https://i.imgur.com/EH1ML1c.png",
+      name: "Ariston Alexia LFT 2284 Panelable",
+    },
   ];
 
   return (
@@ -112,7 +131,12 @@ export default function Home({ productos }) {
               estado estético y que puedan ser reparados.
             </p>
           </div>
-          <Image className=" lg:ml-4" src={ilustracion} width={300} alt="Ilustracion reparaciones" />
+          <Image
+            className=" lg:ml-4"
+            src={ilustracion}
+            width={300}
+            alt="Ilustracion reparaciones"
+          />
         </article>
 
         <article
@@ -133,7 +157,12 @@ export default function Home({ productos }) {
             </p>
           </div>
 
-          <Image className=" lg:ml-4" src={ilustracion2} width={300} alt="Ilustracion reparaciones" />
+          <Image
+            className=" lg:ml-4"
+            src={ilustracion2}
+            width={300}
+            alt="Ilustracion reparaciones"
+          />
         </article>
       </main>
       <Footer />
