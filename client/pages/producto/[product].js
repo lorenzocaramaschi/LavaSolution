@@ -46,6 +46,19 @@ export default function Details({ product, selectedProduct }) {
           name="description"
           content="¡Tu mejor opción para lavavajillas!"
         />
+        <meta
+          name="keywords"
+          content="lavavajillas, lavavajilla, lavadelta, lava, delta, lava delta, lavarropas, vajillas, tigre, zona norte, ariston, whirlpool, general, electric, wld20, ll64"
+        />
+        <meta property="og:title" content="LavaDelta" />
+        <meta property="og:url" content="https://lavadelta.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="LavaDelta se especializa en la venta de lavavajillas usados Premium.
+          Todos los lavavajillas que ofrecemos, poseen un mes de garantía y se entregan probados a conformidad del comprador."
+        />
+        <meta property="og:image" content="https://i.imgur.com/pcg1iZq.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link
